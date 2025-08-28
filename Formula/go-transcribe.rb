@@ -5,13 +5,16 @@
 class GoTranscribe < Formula
   desc "A Go command-line tool that performs transcription using whisper.cpp."
   homepage ""
-  version "1.4.0"
+  version "1.5.1"
   license "MIT"
+
+  depends_on "ffmpeg" => :formula
+  depends_on "vlc" => :cask
   depends_on :macos
 
   on_arm do
-    url "https://github.com/kennyparsons/go-transcribe/releases/download/v1.4.0/go-transcribe_Darwin_arm64.tar.gz"
-    sha256 "91a93ced6cd0939970f1034c531a984076975a7a4d124c6c3d5ab994df05e9ad"
+    url "https://github.com/kennyparsons/go-transcribe/releases/download/v1.5.1/go-transcribe_Darwin_arm64.tar.gz"
+    sha256 "9eef6c9be4dda058623064f90f8896d473d3b1a085640cfdedeb3a11a48d2400"
 
     def install
       bin.install "go-transcribe"
